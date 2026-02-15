@@ -1,1 +1,1 @@
-// No homepage scroll effects currently.
+// Intentionally empty.
