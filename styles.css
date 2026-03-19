@@ -2169,14 +2169,17 @@ body::after {
   }
 
   .word-content .t1 {
+    display: table;
     width: 100%;
+    table-layout: fixed;
+    overflow: hidden;
   }
 
   .word-content .td1 .p1,
   .word-content .td1 .p3 {
-    padding: 0.62rem 0.66rem;
-    font-size: 0.89rem;
-    line-height: 1.4;
+    padding: 0.52rem 0.5rem;
+    font-size: 0.8rem;
+    line-height: 1.32;
   }
 
   .word-content a {
