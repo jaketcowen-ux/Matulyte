@@ -1010,6 +1010,7 @@ body::after {
   gap: 1.5rem;
   width: min(960px, 100%);
   margin: 0 auto;
+  min-width: 0;
 }
 
 .article-layout {
@@ -1024,6 +1025,7 @@ body::after {
   padding: clamp(1.5rem, 2.6vw, 2.8rem);
   position: relative;
   overflow: hidden;
+  min-width: 0;
 }
 
 .article-layout::before {
@@ -1051,6 +1053,12 @@ body::after {
   gap: 0;
   justify-items: stretch;
   align-items: start;
+  min-width: 0;
+}
+
+.word-content > * {
+  min-width: 0;
+  max-width: 100%;
 }
 
 .article-layout > *:first-child {
@@ -1079,6 +1087,8 @@ body::after {
 .article-layout th {
   font-size: clamp(0.98rem, 0.32vw + 0.92rem, 1.04rem);
   color: #203025;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .article-layout p {
@@ -1118,6 +1128,7 @@ body::after {
 .article-figure {
   margin: 1.35rem auto 1rem;
   width: min(100%, 640px);
+  max-width: 100%;
   border-radius: 16px;
   overflow: hidden;
   border: 1px solid rgba(216, 229, 219, 0.95);
@@ -1171,6 +1182,7 @@ body::after {
   display: grid;
   gap: 0.75rem;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  max-width: 100%;
 }
 
 .figure-grid img {
@@ -1312,6 +1324,7 @@ body::after {
 
 .word-content .t1 {
   width: min(100%, 760px);
+  max-width: 100%;
   border-collapse: collapse;
   margin: 1.35rem auto 1.7rem;
   border-radius: 16px;
@@ -1336,6 +1349,8 @@ body::after {
   width: 100%;
   font-size: 0.95rem;
   line-height: 1.55;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .word-content .t1 tr:first-child .td1 {
@@ -1913,7 +1928,7 @@ body::after {
 
 @media (max-width: 640px) {
   .container {
-    width: min(1120px, calc(100% - 1.5rem));
+    width: min(1120px, calc(100% - 1rem));
   }
 
   .section {
@@ -2067,7 +2082,7 @@ body::after {
   }
 
   .article-layout {
-    padding: 1rem;
+    padding: 0.9rem 0.8rem 1rem;
     border-radius: 18px;
   }
 
@@ -2101,6 +2116,10 @@ body::after {
   .word-content .p4,
   .word-content .ul1 {
     width: 100%;
+  }
+
+  .word-content .ul1 {
+    padding-left: 1.15rem;
   }
 
   .word-content > .p1:nth-of-type(4)::first-letter {
@@ -2149,11 +2168,20 @@ body::after {
       inset 0 0 0 1px rgba(162, 185, 168, 0.26);
   }
 
+  .word-content .t1 {
+    width: 100%;
+  }
+
   .word-content .td1 .p1,
   .word-content .td1 .p3 {
     padding: 0.62rem 0.66rem;
     font-size: 0.89rem;
     line-height: 1.4;
+  }
+
+  .word-content a {
+    overflow-wrap: anywhere;
+    word-break: break-word;
   }
 
   .feature-list li {
