@@ -810,18 +810,6 @@ body::after {
   overflow: hidden;
 }
 
-.home-page .section.section-dark .split::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background:
-    radial-gradient(60% 100% at 0% 0%, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0) 70%),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
-  background-size: auto, 26px 100%;
-  opacity: 0.6;
-}
-
 .info-card h3,
 .post-card h2,
 .case-card h2,
